@@ -219,6 +219,25 @@ export default function InvestmentPercentage() {
           />
         );
         // 2️⃣ Update annualInvestment in context
+      } else if (!annualSaving) {
+        showModal(
+          <CalculatorPopUp
+            title="Either you don't have any saving or you haven't filled the profit margin."
+            firstAction="Go to Profit Margin"
+            onFirstAction={() => {
+              hideModal();
+
+              setActiveCalculatorState({
+                calculator: CalculatorEnum.ProfitMargin,
+                stage: 0,
+              });
+            }}
+            secondAction="Close"
+            onSecondAction={() => {
+              hideModal();
+            }}
+          />
+        );
       } else {
         calculateInvestmentPercentage();
 

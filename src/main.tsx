@@ -22,7 +22,7 @@ createRoot(document.getElementById("root")!).render(
               <Route path="/" element={<App />} />
               <Route path="/RTI" element={<RTITest />} />
               <Route path="/RISK-PROFILE" element={<RiskProfileTest />} />
-              <Route path="/RETIREMENT-CAL" element={<Home />} />
+              <Route path="/retirement-calculator" element={<Home />} />
               <Route path="/RISK-APPETITE" element={<RiskAppetite />} />
               <Route path="/RTI-REPORT" element={<RTIReport />} />
             </Routes>
