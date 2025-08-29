@@ -65,7 +65,7 @@ export default function Home() {
       /> */}
       <div className="flex flex-col md:hidden justify-center w-full  h-full  md:gap-5 md:mx-auto md:max-w-[1050px] mb-4">
         <text className="text-xs font-normal text-[#C4C4C4] mb-1">
-          <span className="font-semibold">3</span> more to win the badge!
+          <span className="font-semibold"></span> reload to reset
         </text>
         {/* <ProgressIndicator
           total={4}
