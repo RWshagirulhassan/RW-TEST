@@ -2,15 +2,10 @@
 module.exports = {
   content: ["./src/**/*.{ts,tsx}", "./public/index.html"],
   theme: {
-    // colors: {
-    //   teal: '#42e6e9',
-    //   'dark-blue': '#407bff',
-    //   violet: '#6f7fdf',
-    //   purple: '#9883bd',
-    //   'aqua-violet': '#a0b5e4',
-    //   'sky-blue': '#45d0e7',
-    //   white: '#f1f1f1',
-    // },
+    colors: {
+      "text-teal": "#26D1D4",
+      "bg-grey-secondary": "#16161b",
+    },
     fontFamily: {
       sans: ["Poppins", "sans-serif"],
     },

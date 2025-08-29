@@ -58,6 +58,14 @@ function App() {
               }}
               // variant="outlined"
             />
+            <Button
+              placeholder="RETIREMENT CALCULATOR"
+              className="w-full h-11 md:h-16 md:text-2xl md:font-medium text-base font-medium mb-6 md:mb-11   pointer-events-auto"
+              onClick={() => {
+                navigate("/RETIREMENT-CAL");
+              }}
+              // variant="outlined"
+            />
           </div>
         </div>
       </div>
