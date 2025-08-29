@@ -228,7 +228,7 @@ export function TemplateAccordionTwo({
                       <input
                         key={key}
                         placeholder={key}
-                        className="bg-grey-secondary min-h-[32px] md:min-h-[44px] max-w-[50%] px-4 py-2 text-sm  font-medium md:font-normal md:rounded-[0.625rem] w-full rounded-md text-white outline-none border-solid border-[1px] border-[#CECECE] md:border-[#ffffff] border-opacity-70"
+                        className="bg-[#16161b] min-h-[32px] md:min-h-[44px] max-w-[50%] px-4 py-2 text-sm  font-medium md:font-normal md:rounded-[0.625rem] w-full rounded-md text-white outline-none border-solid border-[1px] border-[#CECECE] md:border-[#ffffff] border-opacity-70"
                         type="number"
                         value={value === null ? "" : String(value)}
                         onChange={(e) =>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import { CALCULATORS_LIST } from "../../../constants";
 import InflationRate from "./InflationRate";
 import InvestmentPercentage from "./InvestmentPercentages";
 import ProfitMargin from "./ProfitMargin";
