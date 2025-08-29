@@ -58,6 +58,7 @@ type CalculatorContextType = {
   othersEdited: boolean;
 
   setActiveCalculatorState: (state: ActiveCalculatorState) => void;
+  goToPreviousStage: () => void;
   setAnnualIncome: (value: number) => void;
   setAnnualExpense: (value: number) => void;
   setAnnualSaving: (value: number) => void;
@@ -171,6 +172,12 @@ export function CalculatorProvider({
       setProfitMargin(null);
     }
   };
+  function goToPreviousStage() {
+    setActiveCalculatorState((prev) => ({
+      ...prev,
+      stage: prev.stage > 0 ? prev.stage - 1 : 0,
+    }));
+  }
 
   const calculateProfitMargin = () => {
     if (annualIncome != null && annualExpense != null) {
@@ -529,6 +536,7 @@ export function CalculatorProvider({
       resetPersonalInflationCalculation,
       resetInvestmentPercentageCalculation,
       setAllocationPercent,
+      goToPreviousStage,
     }),
     [
       activeCalculator,

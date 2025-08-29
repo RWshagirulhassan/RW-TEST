@@ -33,8 +33,8 @@ export default function TemplateInput({
   };
 
   return (
-    <div className="flex md:w-full h-full   flex-col items-center justify-center gap-[1.5rem]  md:gap-14 p-[2rem] md:px-[8rem] md:py-[2rem]  ">
-      <div className="flex flex-col items-center justify-center gap-[0.938rem] md:gap-[0.87rem]">
+    <div className="flex md:w-full h-full   flex-col items-center justify-center gap-[1.5rem]  md:gap-14 p-[2rem] md:px-[8rem] md:py-[2rem]   ">
+      <div className="flex flex-col items-center justify-center gap-[0.938rem] md:gap-[0.87rem] ">
         <h2 className="text-base text-center md:text-lg font-semibold ">
           {heading}
         </h2>

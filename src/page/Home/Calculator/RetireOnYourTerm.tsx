@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
-import { ChevronDown, Info } from "lucide-react";
+import { ChevronDown, ChevronLeft, Info } from "lucide-react";
 import TemplateInput from "./components/Input";
 import { CalculatorEnum, useCalculator } from "./context/calculatorContext";
 
@@ -81,7 +81,7 @@ export function ReverseSIPCalculator() {
   }, [retirementAge, currentAge, finalCorpusRequired, allocationPercent]);
 
   return (
-    <div className="flex w-full h-full flex-col items-center justify-center md:gap-[3rem] gap-5 p-[2rem] md:p-0 md:px-[5.44rem] md:py-[4.25rem]">
+    <div className="flex w-full h-full flex-col items-center justify-center md:gap-[3rem] gap-5 p-[2rem] md:p-0 md:px-[5.44rem] md:py-[4.25rem] ">
       {/* Title + Total SIP */}
       <div className="flex flex-col items-center gap-6 min-h-[200px]">
         <h2 className="text-base font-semibold md:text-lg md:font-semibold md:max-w-[70%] text-center">
@@ -280,11 +280,23 @@ function TemplateResult({
   handleRecalculate,
   handleNext,
 }: TemplateResultProps) {
+  const { goToPreviousStage } = useCalculator();
   return (
     <div className="flex w-full h-full   flex-col items-center justify-center md:gap-[5rem] gap-12  p-[2rem] md:p-0 md:px-[5.44rem] md:py-[4.25rem]">
-      <h2 className="text-base font-semibold md:text-lg md:font-semibold md:max-w-[70%] text-center">
-        {heading}
-      </h2>
+      <div className="flex justify-between items-start w-full">
+        <button
+          onClick={() => {
+            goToPreviousStage();
+          }}
+          className="min-h-fit min-w-10  "
+        >
+          <ChevronLeft />
+        </button>
+        <h2 className="text-base font-semibold md:text-lg md:font-semibold md:max-w-[70%] text-center">
+          {heading}
+        </h2>
+        <div className="min-h-10 min-w-10  "></div>
+      </div>
       <div className="flex flex-col md:gap-3 items-center">
         <h1 className="text-4xl font-medium  md:text-6xl md:font-semibold ">
           ₹ {subheading}
